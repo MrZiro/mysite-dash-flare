@@ -8,7 +8,8 @@ import {
   HardDrive,
   Clock,
   Users,
-  ArrowUpRight
+  ArrowUpRight,
+  Plus
 } from 'lucide-react';
 import { SiteCard, SiteStatus } from '@/components/dashboard/SiteCard';
 import { StatsCard } from '@/components/dashboard/StatsCard';

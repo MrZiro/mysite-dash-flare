@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { 
@@ -154,7 +153,11 @@ const SiteDetail = () => {
               </Button>
             </Link>
             <h1 className="text-3xl font-bold tracking-tight">{site.name}</h1>
-            <div className={cn("status-indicator", site.status)} />
+            <div className={cn(
+              "h-2 w-2 rounded-full", 
+              site.status === 'online' ? "bg-green-500" : 
+              site.status === 'warning' ? "bg-amber-500" : "bg-red-500"
+            )} />
             <Badge variant="outline">{site.framework}</Badge>
           </div>
           <div className="flex items-center text-sm text-muted-foreground">
@@ -194,7 +197,7 @@ const SiteDetail = () => {
                 site.status === 'online' ? "text-green-500" : 
                 site.status === 'warning' ? "text-amber-500" : "text-red-500"
               )}>
-                <div className={cn("mr-1.5 status-indicator", site.status)} />
+                <div className={cn("mr-1.5 h-2 w-2 rounded-full", site.status === 'online' ? "bg-green-500" : site.status === 'warning' ? "bg-amber-500" : "bg-red-500")} />
                 {site.status === 'online' ? "Online" : 
                  site.status === 'warning' ? "Warning" : "Offline"}
               </div>

@@ -40,7 +40,11 @@ export const SiteCard = ({
     <Card className="site-card">
       <CardHeader className="flex flex-row items-center justify-between pb-2">
         <div className="flex items-center space-x-2">
-          <div className={cn("status-indicator", status)} />
+          <div className={cn(
+            "h-2 w-2 rounded-full", 
+            status === 'online' ? "bg-green-500" : 
+            status === 'warning' ? "bg-amber-500" : "bg-red-500"
+          )} />
           <h3 className="font-semibold">{name}</h3>
         </div>
         <DropdownMenu>

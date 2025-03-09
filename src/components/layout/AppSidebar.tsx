@@ -127,7 +127,7 @@ export function AppSidebar() {
           </div>
         </div>
         <div className="px-2 py-2">
-          <SidebarTrigger asChild>
+          <SidebarTrigger>
             <Button variant="outline" size="sm" className="w-full justify-center">
               {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
             </Button>
